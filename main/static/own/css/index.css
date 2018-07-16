@@ -1,0 +1,408 @@
+@font-face {
+	font-family: 'Neon';
+	src: url('/static/own/fonts/neon.ttf');
+}
+
+.animated-opacity {
+	opacity: 0;
+	transition: all .3s;
+}
+
+.animated-opacity.active {
+	opacity: 1;
+	transition: all 1s;
+}
+
+h2.heading-animated {
+	transform: translateX(-100%);
+	transition: all .2s;
+	margin-bottom: 2em;
+	opacity: 0;
+}
+
+h2.heading-animated.active {
+	transform: translateX(0);
+	transition: all .5s;
+	opacity: 1;
+}
+
+header {
+	height: 100vh;
+	background: var(--dark);
+	transition: all .3s;
+}
+
+header div.container {
+	display: flex;
+	height: 100%;
+}
+
+header div.neon-heading {
+	margin: auto;
+}
+
+header div.neon-heading h1 {
+	font-size: 8em;
+	font-family: 'Neon';
+	font-weight: normal;
+	filter: drop-shadow(0px 0px 10px rgba(103, 58, 183, 1));
+	animation: blinking 4s infinite;
+	color: var(--neon_violet);
+	letter-spacing: .4em;
+	text-align: center;
+	padding-left: .4em;
+}
+
+header div.neon-heading h6 {
+	font-size: 2em;
+	margin-top: .5em;
+	font-family: 'Neon';
+	font-weight: normal;
+	filter: drop-shadow(0px 0px 10px rgba(103, 58, 183, 1));
+	animation: blinking 4s infinite;
+	color: var(--neon_violet);
+	letter-spacing: .4em;
+	text-align: center;
+	padding-left: .4em;
+}
+
+header div.neon-heading h1:before,
+header div.neon-heading h1:after {
+	content: '.';
+	font-family: inherit;
+	font-weight: inherit;
+	filter: drop-shadow(0px 0px 10px rgba(103, 58, 183, 1));
+	animation: blinking 4s infinite;
+	color: var(--neon_violet);
+	text-align: center;
+	vertical-align: 30px;
+}
+
+@keyframes blinking {
+	0% {
+		color: var(--neon_violet);
+		filter: drop-shadow(0px 0px 10px rgba(103, 58, 183, 1));
+	}
+
+	5% {
+		color: rgba(138, 71, 255, .5);
+		filter: drop-shadow(0px 0px 10px rgba(103, 58, 183, .5));
+	}
+
+	8% {
+		color: var(--neon_violet);
+		filter: drop-shadow(0px 0px 10px rgba(103, 58, 183, 1));		
+	}
+
+	10% {
+		color: rgba(138, 71, 255, .2);
+		filter: drop-shadow(0px 0px 10px rgba(103, 58, 183, .2));
+	}
+
+	50% {
+		color: var(--neon_violet);
+		filter: drop-shadow(0px 0px 10px rgba(103, 58, 183, 1));	
+	}
+
+	100% {
+		color: var(--neon_violet);
+		filter: drop-shadow(0px 0px 10px rgba(103, 58, 183, 1));
+	}
+}
+
+
+ 		/*	ABOUT_US.   */
+
+
+section.about-us {
+	background: var(--dark);
+	transition: all .3s;
+	padding-top: 0;
+	color: var(--dark);
+}
+
+
+section.about-us h2 {
+	margin-bottom: 2em;
+}
+
+section.about-us div.features-block {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+section.about-us div.features-block .feature-item {
+	flex: 1 1 25%;
+	text-align: center;
+	padding: 2.5em;
+	color: var(--dark);
+	font-family: 'Avenir Next', sans-serif;
+}
+
+section.about-us div.features-block .feature-item img {
+	width: 100%;
+	height: 4.5em;
+	margin-bottom: 1.5em;
+	opacity: 0.9;
+}
+
+
+				/*TEAM*/
+
+section.team {
+	transition: all .3s;
+	color: white;
+}
+
+section.team h2 {
+	margin-bottom: 3em;
+}
+
+
+section.team div.team-block {
+	display: flex;
+	padding: 2em;
+	align-items: center;
+}
+
+section.team div.team-member {
+	border: 2px solid var(--neon_violet);
+	padding: 3em 2em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding-bottom: 3em;
+	background: var(--dark);
+	transition: all .3s;
+	margin: 0 1.5em;
+	box-shadow: 7px 10px 15px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+section.team div.team-member:hover {
+	/*box-shadow: 15px 20px 15px 4px rgba(0, 0, 0, 0.2);*/
+	transition: all .3s;
+	border: 2px solid var(--neon_violet);
+	box-shadow: 0px 0px 10px 0px rgba(103, 58, 183, 1);
+	transform: scale(1.05);
+	z-index: 999;
+}
+
+section.team div.team-member img {
+	width: 30%;
+	transition: all .3s;
+	margin-bottom: 3em;
+	opacity: .7;
+}
+
+section.team div.team-member:hover img {
+	opacity: 1;
+	transition: all .3s;
+}
+
+section.team div.team-member h3 {
+	margin-bottom: .3em;
+}
+
+section.team div.team-member h5 {
+	margin-bottom: 3em;
+	color: #909093;
+	font-weight: normal;
+}
+
+section.team div.team-member p {
+	color: #cacaca;
+	font-family: 'Avenir Next', sans-serif;
+	font-size: .9em;
+}
+
+
+		/*LAST WORK*/
+
+
+
+section.last-work {
+	background: white;
+	transition: all .3s;
+}
+
+section.last-work h2 {
+	margin-bottom: 3em;
+}
+
+section.last-work div.last-work-block {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+section.last-work div.site-preview {
+	width: 50%;
+	height: 25em;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+section.last-work div.site-preview img {
+	max-width: 100%;
+	position: absolute;
+}
+
+section.last-work div.site-preview img.ipad, 
+section.last-work div.site-preview img.iphone {
+	z-index: 99;
+}
+
+section.last-work div.site-preview img.macbook {
+	width: 100%;
+	bottom: 0;
+}
+
+@keyframes ipad-appear {
+	from {
+		transform: translateX(-50%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+section.last-work div.site-preview img.ipad {
+	bottom: 0;
+	left: 0;
+	width: 40%;
+} 
+
+section.last-work div.site-preview img.iphone {
+	width: 20%;
+	bottom: 0;
+	right: 0;
+}
+
+section.last-work div.review {
+	width: 30%;
+	height: 30vw;
+	background: white;
+	border: 1px solid black;
+
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+
+			/*ABOUT US*/
+
+	section.about-us div.features-block .feature-item {
+		flex: 1 1 33%;
+		text-align: center;
+		padding: 2.5em 1em;
+	}
+
+			/*TEAM*/
+
+	section.team div.team-block {
+		flex-direction: row;
+		padding: 0;
+	}	
+
+	section.team div.team-block div.team-member {
+		padding: 3em .5em;
+		margin: 1em 0;
+	}
+
+	section.team div.team-block div.team-member:hover {
+		transform: scale(1.05);
+	}
+
+			/*LAST WORK*/
+
+
+
+	section.last-work div.container div.site-preview {
+		width: 80%;
+	}
+
+	section.last-work div.container h2 {
+		margin-bottom: 5em;
+	}
+
+	section.last-work div.last-work-block {
+		flex-direction: column;
+	}
+	
+	section.last-work div.last-work-block div.review {
+		margin-top: 4em;
+	}
+
+}
+
+
+@media screen and (max-width: 760px) {
+
+	/*HEADER*/
+
+	header div.neon-heading h1 {
+		font-size: 3.5em;
+		letter-spacing: .4em;
+		text-align: center;
+	}
+
+	header div.neon-heading h1:before,
+	header div.neon-heading h1:after {
+		vertical-align: 15px;
+	}
+
+	header div.neon-heading h6 {
+		font-size: 1.2em;
+	}
+
+
+			/*ABOUT US*/
+
+	section.about-us div.features-block .feature-item {
+		flex: 1 1 100%;
+		text-align: center;
+		padding: 2.5em 1em;
+	}
+
+
+
+		/*TEAM*/
+
+	section.team div.team-block {
+		flex-direction: column;
+		padding: 0;
+	}	
+
+	section.team div.team-block div.team-member {
+		padding: 1.2em;
+		margin: 1em 0;
+	}
+
+
+			/*LAST WORK*/
+
+
+
+	section.last-work div.container div.site-preview {
+		width: 100%;
+		height: 35vh;
+	}
+}
+
+
+
+
+
+
+
+
+

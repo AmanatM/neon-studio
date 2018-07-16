@@ -1,0 +1,275 @@
+/*     #fad444 ---- light      */
+
+/*     #202126 ---- dark       */
+
+/*     #8a47ff ---- neon violet       */
+
+
+:root {
+	--light: #673ab7;
+	--dark: #202126;
+	--neon_violet: #8a47ff;
+}
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+	font-size: 1em;
+}
+
+div.wrapper {
+}
+
+div.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+button.btn {
+	border: 2px solid var(--dark);
+	background: transparent;
+	color: inherit;
+}
+
+button.btn:hover {
+	background: var(--dark);
+	color: var(--light);
+}
+
+h1.heading-large {
+	font-family: 'Georgia', serif;
+	font-size: 1.8em;
+	color: #7F7F7F;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+h2.heading-normal {
+	font-family: 'Arial', sans-serif;
+	text-align: center;
+	color: var(--dark);
+}
+
+h2.heading-dark {
+	font-family: 'Arial', sans-serif;
+	color: var(--neon_violet);
+	text-align: center;
+}
+
+section {
+	padding: 6em 0;
+	overflow: hidden;
+}
+
+	/*NAVBAR*/
+
+
+
+nav.navbar {
+	background-color: var(--dark);
+	padding: 2em 0;
+	color: var(--neon_violet);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	box-shadow: 0px 5px 20px rgba(0, 0, 0, .4);
+	z-index: 9999;
+	font-size: .8em;
+	transition: all .3s;
+}
+
+nav.navbar div.toogle-menu {
+	display: none;
+}
+
+nav.navbar div.social-btns a {
+	display: flex;
+	align-items: center;
+}
+
+nav.navbar div.container {
+	display: flex;
+	align-items: center;
+}
+
+nav.navbar svg path.a {
+	fill: var(--neon_violet);
+	transition: all .3s;
+}
+
+nav ul.menu {
+	display: flex;
+	font-size: .9em;
+	margin-right: auto;
+	transition: none !important;
+	transition: all .3s;
+	align-items: center;
+}
+
+nav ul.menu li.menu-items {
+	padding-top: .3em;
+}
+
+nav a {
+	list-style: none;
+}
+
+nav a:hover {
+	color: #a674ff;
+	filter: drop-shadow(0px 0px 10px rgba(103, 58, 183, 1));
+}
+
+nav div.social-btns a:hover path.a {
+	fill: #a674ff;
+	color: var(--neon_violet);
+	transition: all .3s;
+	filter: drop-shadow(0px 0px 10px rgba(103, 58, 183, 1));
+}
+
+nav ul a {
+	margin: 0 2em;
+}
+
+nav ul a:first-child {
+	margin-left: 0;
+}
+
+nav ul a:last-child {
+	margin-right: 0;
+}
+
+nav .nav-logo {
+	font-size: 1.7em;
+	font-weight: bold;
+	margin-right: 3em;
+}
+
+nav div.social-btns {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+nav div.social-btns a {
+	margin: 0 1.3em; 
+}
+
+nav div.social-btns a:last-child {
+	margin-right: 0;
+}
+
+nav div.social-btns svg {
+	width: 1.3em;
+	height: 1.3em;
+}
+
+
+
+
+
+@media screen and (max-width: 900px) {
+
+	nav.navbar ul.menu {
+		display: none;
+	}
+
+	nav.navbar div.toogle-btn {
+		display: flex;
+		flex-direction: column;
+		width: 35px;
+		justify-content: space-between;
+		height: 20px;
+		cursor: pointer;
+		margin-left: auto;
+		z-index: 999999;
+		transition: all .3s;
+	}
+
+	nav.navbar div.toogle-btn.active {
+		transition: all .4s;
+	}
+
+	nav.navbar div.toogle-btn.active div:first-child {
+		width: 50%;
+		transform: rotate(45deg) translate(3px);
+	}
+
+	nav.navbar div.toogle-btn.active div:nth-child(2) {
+		transform: rotate(-45deg);
+	}
+
+	nav.navbar div.toogle-btn.active div:last-child {
+		width: 50%;
+		transform: translate(15px, -3px) rotate(45deg);
+	}
+
+	nav.navbar div.toogle-btn:hover div {
+		filter: drop-shadow(0px 0px 10px rgba(103, 58, 183, 1));
+		background-color: #a674ff;
+		transition: all .4s;
+	}
+
+	nav.navbar div.toogle-btn div {
+		transition: all .3s;
+		width: 100%;
+		height: 2px;
+		background: var(--neon_violet);
+	}
+
+	@keyframes menu_appear {
+		from {
+			transform: translateY(-100%);
+		}
+
+		to {
+			transform: translateY(0);
+		}
+	}
+
+	nav.navbar ul.menu.mobile-active {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		background: rgba(0, 0, 0, .8);
+		font-size: 1.2em;
+		justify-content: center;
+		animation: menu_appear .4s;
+		padding: .5em 0;
+	}
+
+	nav.navbar ul.menu a.nav-logo {
+		font-size: 2.4em;
+		display: none;
+	}
+
+	nav.navbar ul.menu.mobile-active li {
+		margin: .6em 0;
+	}
+
+	nav.navbar ul.menu.mobile-active * {
+		margin: 0;
+	}
+}
+
+
+
+
+

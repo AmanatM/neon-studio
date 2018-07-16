@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+
+{% block custom_title %} {{ content.title }} {% endblock %}
+
+{% load static %}
+{% block custom_css %}
+	<link rel="stylesheet" href="{% static 'own/css/index.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+	<header id="header">
+		<div class="container">
+			<div class="neon-heading">
+
+				<h1 class="heading">NEON</h1>
+				<h6 class="subheading">STUDIO</h6>
+
+			</div>			
+		</div>
+
+	</header>
+
+
+	<section class="about-us" id="about_us">
+		<div class="container">
+			<h2 class="heading-animated heading-normal" id="who_are_we_heading"> {{ content.features_heading }} </h2>
+			<div class="features-block animated-opacity" id="features_block">
+				<div class="feature-item">
+					<img src="{% static 'own/imgs/icons/monitor.svg' %}" alt="" class="feature-item-img">
+					<p class="feature-text">{{ content.feature_1_text }}</p>
+				</div>
+				<div class="feature-item">
+					<img src="{% static 'own/imgs/icons/calendar.svg' %}" alt="" class="feature-item-img">
+					<p class="feature-text">{{ content.feature_2_text }}</p>
+				</div>
+				<div class="feature-item">
+					<img src="{% static 'own/imgs/icons/wallet.svg' %}" alt="" class="feature-item-img">
+					<p class="feature-text">{{ content.feature_3_text }}</p>
+				</div>
+				<div class="feature-item">
+					<img src="{% static 'own/imgs/icons/key.svg' %}" alt="" class="feature-item-img">
+					<p class="feature-text">{{ content.feature_4_text }}</p>
+				</div>
+				<div class="feature-item">
+					<img src="{% static 'own/imgs/icons/handshake.svg' %}" alt="" class="feature-item-img">
+					<p class="feature-text">{{ content.feature_5_text }}</p>
+				</div>
+				<div class="feature-item">
+					<img src="{% static 'own/imgs/icons/phone.svg' %}" alt="" class="feature-item-img">
+					<p class="feature-text">{{ content.feature_6_text }}</p>
+				</div>
+				<div class="feature-item">
+					<img src="{% static 'own/imgs/icons/quality.svg' %}" alt="" class="feature-item-img">
+					<p class="feature-text">{{ content.feature_7_text }}</p>
+				</div>
+				<div class="feature-item" id="feature_item_last">
+					<img src="{% static 'own/imgs/icons/support.svg' %}" alt="" class="feature-item-img">
+					<p class="feature-text">{{ content.feature_8_text }}</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="team" id="team_section">
+		<div class="container">
+			<h2 class="heading-animated heading-dark" id="team_heading">Наша команда</h2>
+			<div class="team-block  animated-opacity" id='team_block'>
+
+				<div class="team-member">
+					<img src="{% static 'own/imgs/icons/person.svg' %}" alt="" class="team-member-img">
+					<h3 class="team-member-name">Name Surname</h3>
+					<h5 class="team-member-position">Co-Founder & CEO</h5>
+					<p class="team-member-bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto maxime non dolorem, deserunt, optio debitis fuga.</p>
+				</div>
+				<div class="team-member active">
+					<img src="{% static 'own/imgs/icons/person.svg' %}" alt="" class="team-member-img">
+					<h3 class="team-member-name">Name Surname</h3>
+					<h5 class="team-member-position">Co-Founder & CEO</h5>
+					<p class="team-member-bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto maxime non dolorem, deserunt, optio debitis fuga.</p>
+				</div>
+				<div class="team-member" id="team_member_last">
+					<img src="{% static 'own/imgs/icons/person.svg' %}" alt="" class="team-member-img">
+					<h3 class="team-member-name">Name Surname</h3>
+					<h5 class="team-member-position">Co-Founder & CEO</h5>
+					<p class="team-member-bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto maxime non dolorem, deserunt, optio debitis fuga.</p>
+				</div>		
+
+			</div>
+		</div>
+	</section>
+
+
+	<section class="last-work" id="last_work_section">
+		<div class="container">
+			<h2 class="heading-normal heading-animated" id="last_work_heading">Последняя Работа</h2>
+			<div class="last-work-block animated-opacity" id="last_work_block">
+				<div class="site-preview">
+					<img src="{% static 'own/imgs/ipad.png' %}" alt="" class="ipad" id="ipad_img">
+					<img src="{% static 'own/imgs/macbook.png' %}" alt="" class="macbook">
+					<img src="{% static 'own/imgs/iphone.png' %}" alt="" class="iphone" id="i=iphone_img">
+				</div>
+				<div class="review">
+					
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+{% endblock %}
+
+
+
+

@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block custom_title %}Document{% endblock %}</title>
+	<link rel="stylesheet" href="{% static 'base.css' %}">
+	<link rel="shortcut icon" href="{%  static 'favicon.png' %}">
+
+	{% block custom_css %}{% endblock %}
+</head>
+<body>
+	<div class="wrapper">
+		
+		{% include 'includes/navbar.html' %}
+
+
+		{% block content %}
+
+		{% endblock %}
+
+		{% if messages %}
+			{% for message in messages %}
+				<h5 class="message {% if message.tags %} {{ message.tags }} {% endif %}">{{ message }}</h5>
+			{% endfor %}
+		{% endif %}
+		
+	</div>
+	<script type="text/javascript" src="{% static 'own/js/script.js' %}"></script>
+	{% block custom_js %}{% endblock %}
+</body>
+</html>
